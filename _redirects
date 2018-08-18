@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://wizardly-lichterman-d8bb69.netlify.com/* http://treble.andro.plus/:splat 301!
