@@ -6,6 +6,10 @@
  * Made By MaterializeCSS.com
  */
 
+body{
+  min-width: 350px;
+}
+
 .akane-paw{
   margin: 0 auto;
 }
