@@ -6,6 +6,14 @@
  * Made By MaterializeCSS.com
  */
 
+.akane-paw{
+  margin: 0 auto;
+}
+.akane-paw img{
+  width: 36px;
+  vertical-align: middle;
+}
+
 .icon-block {
   padding: 0 15px;
 }
@@ -13,6 +21,15 @@
 	font-size: inherit;
 }
 
+.icon-neko-hat{
+	transform: rotate(-90deg);
+	font-size: 48px !important;
+	color: #000000;
+}
+
+.akane-neko{
+	background-color:#464140 !important;
+}
 .akane-blue{
 	background-color:#79b5e5 !important;
 }
