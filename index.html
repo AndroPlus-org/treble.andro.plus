@@ -170,10 +170,12 @@
           <ul class="collection">
             <li class="collection-item">* Changes model name based on vendor implementation instead of just "Phh-Treble vanilla".</li>
             <li class="collection-item">* Uses Snap instead of AOSP camera.</li>
+            <li class="collection-item">* Enabled Camera API 2 in Snap for Sharp AQUOS S2.</li>
             <li class="collection-item">* Fixed Bluetooth and USB Type-C headset audio (In-call audio via Bluetooth headset is not working yet).</li>
             <li class="collection-item">* Added power profile for UMIDIGI Z2.</li>
-            <li class="collection-item">* Fixed UI on the first boot for Xiaomi Mi Pad 4 (untested).</li>
-            <li class="collection-item">* Fixed brightness for Xiaomi Mi Pad 4 (untested).</li>
+            <li class="collection-item">* Fixed UI size on the first boot for Xiaomi Mi Pad 4.</li>
+            <li class="collection-item">* Fixed brightness for Xiaomi Mi Pad 4.</li>
+            <li class="collection-item">* Enabled proximity check on screen wake for Sharp AQUOS S2 and Xiaomi Mi Pad 4.</li>
           </ul>
           Source: <a href="https://github.com/AndroPlus-org?tab=repositories">GitHub</a>
         </div>
@@ -237,6 +239,9 @@
             A. Currently treble roms can't use Dual SIM (SIM slot 2). Please insert SIM to slot 1 and leave slot 2 empty.</li>
             <li class="collection-item">Q. MTP is not working! How can I enable?<br />
             A. Please open developer option and change USB config. If it doesn't work, check if your PC is recognizing your device as MTP device in device manager. Often Windows recognize the device as "Unknown" and you have to manually set/install MTP driver for the unknown device.</li>
+            <li class="collection-item">Q. How can I fix rounded cornor?<br />
+            A. Please run this command ("8" will be different for each devices):<br />
+            <code>adb shell settings put secure sysui_rounded_content_padding 8</code></li>
             <li class="collection-item">Q. How can I get back to stock rom?<br />
             A. You have to flash stock system image to system and wipe data in fastboot or recovery.</li>
           </ul>
@@ -266,7 +271,7 @@
           <ul class="collection">
             <li class="collection-item"><a href="https://androplus.org/Entry/6713/">SHARP AQUOS S2 (Snapdragon 630)</a></li>
             <li class="collection-item"><a href="https://androplus.org/Entry/7151/">UMIDIGI Z2 (MediaTek MT6763)</a> - buy at <a href="https://www.gearbest.com/cell-phones/pp_1845863.html?wid=1817324&lkid=15410345">GearBest</a> or <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FUMIDIGI-Z2-Special-Edition-Global-Bands-6-2-FHD-Full-Screen-Helio-P23-4G-64GB-F%2F32904068985.html">AliExpress</a></li>
-            <li class="collection-item">Xiaomi Mi Pad 4 Plus (Snapdragon 660) - buy at <a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&url=5091">Geekbuying</a>, <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-mipad-4-Tablets-4-8-10-1-Snapdragon-660-AIE-13MP%2F32888553563.html">AliExpress</a> or <a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjUxMzEwMjc5Lmh0bWwiLCJ0eXBlIjoiMSJ9&utm_source=Aff44&utm_medium=affiliate">JoyBuy</a></li>
+            <li class="collection-item">Xiaomi Mi Pad 4 / Mi Pad 4 Plus (Snapdragon 660) - buy at <a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&url=5091">Geekbuying</a>, <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-mipad-4-Tablets-4-8-10-1-Snapdragon-660-AIE-13MP%2F32888553563.html">AliExpress</a> or <a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjUxMzEwMjc5Lmh0bWwiLCJ0eXBlIjoiMSJ9&utm_source=Aff44&utm_medium=affiliate">JoyBuy</a></li>
           </ul>
           Note: All Project Treble enabled devices should work. <a href="https://github.com/phhusson/treble_experimentations/wiki">Some are listed here.</a>
         </div>
