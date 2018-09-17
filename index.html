@@ -180,11 +180,13 @@
             setprop config.force_bottom_navbar 0</code><br />
             then reboot or restart system ui.
             </li>
-            <li class="collection-item">* Force tap to wake for Xiaomi Mi Pad 4.<br />
+            <li class="collection-item">* Force tap to wake for Xiaomi Mi Pad 4 (with FocalTech touch panel).<br />
             To disable, please run these commands:<br />
             <code>su<br />
             echo 0 > /sys/devices/soc/c177000.i2c/i2c-3/3-0038/fts_gesture_mode</code>
             </li>
+            <li class="collection-item">* Fixed minimum brightness for Xiaomi Mi Pad 4.<br />
+            NOTE: Currently notification LED is half broken.</li>
           </ul>
           Source: <a href="https://github.com/AndroPlus-org?tab=repositories">GitHub</a>
         </div>
@@ -202,7 +204,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
-  <div class="section no-pad-bot" id="changes">
+  <div class="section no-pad-bot" id="howto">
     <div class="container">
       <div class="row center">
         <h4 class="header col s12 light">How to flash</h4>
@@ -227,7 +229,50 @@
     </div>
   </div>
 
-  <div class="section no-pad-bot" id="changes">
+  <div class="section no-pad-bot" id="diff">
+    <div class="container">
+      <div class="row center">
+        <h4 class="header col s12 light">Differences between AICP and AICP-mordiford</h4>
+      </div>
+      <div class="row">
+        <div class="col l2"></div>
+        <div class="col l8">
+          <ol class="collection">
+            <li class="collection-item">
+              <a href="https://github.com/mordiford/frameworks_base">frameworks_base</a>:<br />
+               Screenshot: Move imageDate to forward
+            </li>
+            <li class="collection-item">
+              <a href="https://github.com/mordiford/lineage-sdk">lineage-sdk</a>:<br />
+              Add Japanese translation for accent color
+            </li>
+            <li class="collection-item">
+              <a href="https://github.com/mordiford/packages_apps_AicpExtras">packages_apps_AicpExtras</a>:<br />
+              Update Japanese translation<br />
+              Change Easter egg
+            </li>
+            <li class="collection-item">
+              <a href="https://github.com/mordiford/packages_apps_DUI">packages_apps_DUI</a>:<br />
+              Add DUI
+            </li>
+            <li class="collection-item">
+              <a href="https://github.com/mordiford/vendor_aicp">vendor_aicp</a>:<br />
+              bootanimation: Disable randomize<br />
+              packages: Remove Eleven<br />
+              version: Stop override USER to android-build<br />
+            </li>
+            NOTE: AICP-mordiford is unofficial build. Please do not post any bug reports or issues to AICP official community.<br />
+            You can donate to AICP official team at <a href="http://aicp-rom.com/">official page</a>.
+          </ol>
+        </div>
+        <div class="col l2"></div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="section no-pad-bot" id="faq">
     <div class="container">
       <div class="row center">
         <h4 class="header col s12 light">FAQ</h4>
@@ -269,7 +314,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
-  <div class="section no-pad-bot" id="changes">
+  <div class="section no-pad-bot" id="device">
     <div class="container">
       <div class="row center">
         <h4 class="header col s12 light">My testing devices</h4>
@@ -291,7 +336,7 @@
     </div>
   </div>
 
-  <div class="section no-pad-bot" id="changes">
+  <div class="section no-pad-bot" id="support">
     <div class="container">
       <div class="row center">
         <h4 class="header col s12 light">We need your support</h4>
