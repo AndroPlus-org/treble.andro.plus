@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Pixel Experience for Project Treble</title>
+  <title>Pixel Experience for Mi MIX 3</title>
   
   <meta name="msapplication-TileColor" content="#2d88ef">
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
@@ -82,7 +82,7 @@
 
   <nav class="akane-blue" role="navigation">
     <div class="nav-wrapper container">
-      <span id="logo-container" class="brand-logo">Pixel Experience GSI</span>
+      <span id="logo-container" class="brand-logo">Pixel Experience for MIX 3</span>
       <ul class="right hide-on-med-and-down">
         <li>
           <a href="https://androplus.org/">AndroPlus</a>
@@ -95,12 +95,12 @@
     <div class="container">
       <br>
       <br>
-      <h1 class="header center akane-red-text">Pixel Experience for Project Treble</h1>
+      <h1 class="header center akane-red-text">Pixel Experience for Mi MIX 3</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Unofficial Pixel Experience GSI with some improvements&#x1f496;</h5>
+        <h5 class="header col s12 light">Unofficial Pixel Experience for Xiaomi Mi MIX 3&#x1f469;&#x1f3fb;&#x200d;&#x1f680;</h5>
       </div>
       <div class="row center">
-        <a href="https://drive.google.com/open?id=10ftEogR9pSWaSY8hWpKjyesyBjexM4ds" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a><br />
+        <a href="https://drive.google.com/open?id=17lDJ-aOInCXdHQf8KXtoksEhZJgz7gS6" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a><br />
         <p>* GApps is included.</p>
       </div>
       <br>
@@ -120,16 +120,31 @@
   <div class="section no-pad-bot" id="changes">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">Our GSI-specific changes</h4>
+        <h4 class="header col s12 light">Current status</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
+          Working:
           <ul class="collection">
-            <li class="collection-item">* Changes model name based on vendor implementation instead of just "Phh-Treble vanilla".</li>
-            <li class="collection-item">* Added patch for Xiaomi Mi MIX 3 (brightness, AOD and others).</li>
-            <li class="collection-item">* Enabled auto unlock after face unlock for Mi MIX 3.</li>
-            <li class="collection-item">* Disabled screenshot sound.</li>
+            <li class="collection-item">* Wi-Fi</li>
+            <li class="collection-item">* Bluetooth (audio, in-call audio)</li>
+            <li class="collection-item">* Mobile Data (4G, VoLTE)</li>
+            <li class="collection-item">* Dual SIM</li>
+            <li class="collection-item">* Camera</li>
+            <li class="collection-item">* NFC</li>
+            <li class="collection-item">* GPS</li>
+            <li class="collection-item">* Quick Charge (USB PD)</li>
+            <li class="collection-item">* Wireless Charge (Qi)</li>
+            <li class="collection-item">* Sensors including proximity</li>
+            <li class="collection-item">* Ambient display (Always On Display)</li>
+            <li class="collection-item">* Fingerprint</li>
+            <li class="collection-item">* Assistant key</li>
+          </ul>
+          Not working:
+          <ul class="collection">
+            <li class="collection-item">* Slider (no app to handle it)</li>
+            <li class="collection-item">* OK Google detection in any screen</li>
           </ul>
           Source: <a href="https://github.com/AndroPlus-org?tab=repositories">GitHub</a>
         </div>
@@ -156,39 +171,13 @@
         <div class="col l2"></div>
         <div class="col l8">
           <ol class="collection">
-            <li class="collection-item">Download GSI for your device<br /> If your device is arm64 and system-as-root device (you can check with this adb command: <code>getprop ro.build.system_root_image</code>), download "system-arm64-ab-vanilla-nosu.img"<br />
-            If your device is arm64 and is not system-as-root device...sorry, currently I'm not building GSI for them.</li>
+            <li class="collection-item">Download system.img.</li>
             <li class="collection-item">Reboot to bootloader or recovery</li>
-            <li class="collection-item">Flash/install to system by <code>fastboot flash system system-arm64-ab-vanilla-nosu.img</code></li>
-            <li class="collection-item">(Optional) Do factory reset if you flashed GSI over other roms</li>
+            <li class="collection-item">Recovery: Install system.img to system<br />
+            Fastboot: <code>fastboot flash system system.img</code></li>
+            <li class="collection-item">Do factory reset if you flashed over other roms</li>
             <li class="collection-item">Profit!</li>
-            NOTE: Please don't use third-party custom rom (e.g. Xiaomi.eu roms) as the base rom. Some hacky roms have wrong (unofficial) fingerprint and GSI can't detect what device you are using.
           </ol>
-        </div>
-        <div class="col l2"></div>
-      </div>
-      <br>
-      <br>
-    </div>
-  </div>
-
-  <div class="section no-pad-bot" id="faq">
-    <div class="container">
-      <div class="row center">
-        <h4 class="header col s12 light">FAQ</h4>
-      </div>
-      <div class="row">
-        <div class="col l2"></div>
-        <div class="col l8">
-          <ul class="collection">
-            <li class="collection-item">Q. MTP is not working! How can I enable?<br />
-            A. Please open developer option and change USB config. If it doesn't work, check if your PC is recognizing your device as MTP device in device manager. Often Windows recognize the device as "Unknown" and you have to manually set/install MTP driver for the unknown device.</li>
-            <li class="collection-item">Q. How can I fix rounded cornor?<br />
-            A. Please run this command ("8" will be different for each devices):<br />
-            <code>adb shell settings put secure sysui_rounded_content_padding 8</code></li>
-            <li class="collection-item">Q. How can I get back to stock rom?<br />
-            A. You have to flash stock system image to system and wipe data in fastboot or recovery.</li>
-          </ul>
         </div>
         <div class="col l2"></div>
       </div>
@@ -207,17 +196,29 @@
   <div class="section no-pad-bot" id="device">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">My testing devices</h4>
+        <h4 class="header col s12 light">My testing device</h4>
       </div>
       <div class="row">
-        <div class="col l2"></div>
-        <div class="col l8">
-          <ul class="collection">
-          <li class="collection-item"><a href="https://androplus.org/Entry/7847/">Xiaomi Mi MIX 3</a> (Snapdragon 845) - buy at <a href="https://www.gearbest.com/cell-phones/pp_009427083237.html?wid=1433363&lkid=16942682">GearBest</a>, <a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&url=139773">Geekbuying</a>, <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html">AliExpress</a>, <a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjAwNTE3NTAyLmh0bWwiLCJ0eXBlIjoiMSJ9">JoyBuy</a> or <a href="http://shrsl.com/19ce4">GIZTOP</a></li>
-          </ul>
-          Note: All Project Treble enabled devices should work. <a href="https://github.com/phhusson/treble_experimentations/wiki">Some are listed here.</a>
-        </div>
-        <div class="col l2"></div>
+        <div class="cstmreba">
+          <div class="kaerebalink-box">
+          <div class="kaerebalink-image"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html" target="_blank" rel="nofollow"><img src="img/perseus.png" style="border: none;" class="" height="200" /></a></div>
+          <div class="kaerebalink-info">
+          <div class="kaerebalink-name"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html" target="_blank" rel="nofollow">Xiaomi Mi MIX 3</a>
+          <div class="kaerebalink-powered-date"></div>
+          </div>
+          <div class="kaerebalink-detail">Xiaomi</div>
+          <div class="kaerebalink-link1">
+          <div class="shoplinkyahoo"><a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&amp;url=139773
+          " target="_blank" rel="nofollow">GeekBuying</a></div>
+          <div class="shoplinkrakuten tiananmen64"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html" target="_blank" rel="nofollow">Aliexpress</a></div>
+          <div class="shoplinkamazon tiananmen64"><a href="https://ad.admitad.com/g/e8f129b05ec139a7aa7e6213826a88/?ulp=https%3A%2F%2Fwww.banggood.com%2FXiaomi-Mi-MIX-3-6_39-inch-6GB-RAM-128GB-ROM-Snapdragon-845-Octa-core-Smartphone-p-1371094.html" target="_blank" rel="nofollow">Banggood</a></div>
+          <div class="shoplinkyahoo tiananmen64"><a href="https://www.gearbest.com/cell-phones/pp_009427083237.html?wid=1433363&amp;lkid=16942682" target="_blank" rel="nofollow">GearBest</a></div>
+          <div class="shoplinkrakuten tiananmen64"><a href="http://shrsl.com/19ce4" target="_blank" rel="nofollow">GIZTOP</a></div>
+          </div>
+          </div>
+          <div class="booklink-footer"></div>
+          </div>
+          </div>
       </div>
       <br>
       <br>
@@ -232,7 +233,7 @@
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
-          My build server is also my daily driver, so I can only build the rom at weekend. I want dedicated PC for the building...
+          My build server is also my daily driver, so I can only build the rom at weekend. I want more SSD and dedicated PC for the building...
           <ul class="collection">
             <li class="collection-item"><a href="https://www.paypal.me/androplus">PayPal</a></li>
             <li class="collection-item"><a href="https://amzn.to/2RaNEI9">Amazon Wish List (US)</a></li>
@@ -253,7 +254,7 @@
         <div class="col l6 s12">
           <h5 class="black-text">What is Pixel Experience?</h5>
           <p class="black-text text-lighten-4">
-            Pixel Experience is an AOSP based ROM, with Google apps included and all Pixel goodies. This GSI is unofficial, so please don't report bugs to the official team.
+            Pixel Experience is an AOSP based ROM, with Google apps included and all Pixel goodies. This build is unofficial, so please don't report bugs to the official team.
           </p>
 
 
@@ -263,9 +264,6 @@
           <ul>
             <li>
               <a href="https://download.pixelexperience.org/">Pixel Experience Official</a>
-            </li>
-            <li>
-              <a href="https://github.com/phhusson/treble_experimentations/wiki">Phh-Treble Wiki</a>
             </li>
           </ul>
         </div>
