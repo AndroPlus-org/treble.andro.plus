@@ -8,6 +8,7 @@
 
 body{
   min-width: 350px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .akane-paw{
@@ -48,6 +49,9 @@ body{
 }
 .akane-brown-dark {
   background-color: #66514f !important;
+}
+#logo-container,.title-logo{
+  font-family: 'Comfortaa', cursive;
 }
 
 .page-footer {

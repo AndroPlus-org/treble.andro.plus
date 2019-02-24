@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>AICP-mordiford for Project Treble</title>
+  <title>FolokoROM GSI is here!</title>
   
   <meta name="msapplication-TileColor" content="#2d88ef">
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
@@ -51,7 +51,8 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css?v=201902" type="text/css" rel="stylesheet" media="screen,projection" />
+ <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat" rel="stylesheet"> 
 
   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 
@@ -82,7 +83,7 @@
 
   <nav class="akane-blue" role="navigation">
     <div class="nav-wrapper container">
-      <span id="logo-container" class="brand-logo">AICP GSI</span>
+      <span id="logo-container" class="brand-logo">FlokoROM GSI</span>
       <ul class="right hide-on-med-and-down">
         <li>
           <a href="https://androplus.org/">AndroPlus</a>
@@ -95,58 +96,15 @@
     <div class="container">
       <br>
       <br>
-      <h1 class="header center akane-red-text">AICP-mordiford for Project Treble</h1>
+      <h1 class="header center akane-red-text title-logo">FlokoROM GSI</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Unofficial AICP GSI with some improvements and kawaii&#x1f496;</h5>
+        <h5 class="header col s12 light">Unofficial FlokoROM GSI for Project Treble ready devices&#x1f496;</h5>
       </div>
       <div class="row center">
-        <a href="https://drive.google.com/open?id=1LtPNR6R4dxJslXFIjpF9FhyfEfhBTCOa" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a>
+        <a href="https://drive.google.com/open?id=1Und0ubXS7hNT_26YduVVXXJ5-MUVAsSq" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a>
       </div>
       <br>
       <br>
-
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text">
-              <i class="material-icons">flash_on</i>
-            </h2>
-            <h5 class="center">No Need to Build Your Own ROM</h5>
-
-            <p class="light">With Project Treble, we no longer need to build custom roms for our own devices - build one generic image, flash it and profit! If your device properly supports Project Treble, you can safely flash GSI (Generic System Image) on devices running with all SoCs including Snapdragon and MediaTek - even Kirin and Exynos!
-            </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text">
-              <i class="material-icons">group</i>
-            </h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">AICP is a one of the most stable and powerful ROM. With the power of Project Treble and Phh-Treble, we can now enjoy AICP experience on more devices. The device-specific bugfix and improvements are coming continuously!</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text">
-              <i class="material-icons">thumb_up</i>
-            </h2>
-            <h5 class="center">Akane Time Instead of Yoga Time</h5>
-
-            <p class="light">AICP has "Yoga time" easter egg in AICP Extras, but GitHub recently banned it because it's too sexy. AICP-mordiford has "Akane time" instead - the picture of <a href="https://akane.blue/">Aikawa Akane</a>, the ambassador of the Mastodon instance, <a href="https://mstdn.maud.io/">:don:</a>.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -169,28 +127,10 @@
         <div class="col l8">
           <ul class="collection">
             <li class="collection-item">* Changes model name based on vendor implementation instead of just "Phh-Treble vanilla".</li>
-            <li class="collection-item">* Uses Snap instead of AOSP camera.</li>
-            <li class="collection-item">* Enabled Camera API 2 in Snap for Sharp AQUOS S2.</li>
-            <li class="collection-item">* Added power profile for UMIDIGI Z2.</li>
-            <li class="collection-item">* Fixed UI size on the first boot for Xiaomi Mi Pad 4.</li>
-            <li class="collection-item">* Enabled proximity check on screen wake for Sharp AQUOS S2 and Xiaomi Mi Pad 4.</li>
-            <li class="collection-item">* Force bottom navigation bar for Xiaomi Mi Pad 4.<br />
-            Note this feature only work with stock navigation bar.<br />
-            To disable, please run these commands:<br />
-            <code>su<br />
-            setprop config.force_bottom_navbar 0</code><br />
-            then reboot or restart system ui.<br />
-            </li>
-            <li class="collection-item">* Force tap to wake for Xiaomi Mi Pad 4 (with FocalTech touch panel).<br />
-            To disable, please run these commands:<br />
-            <code>su<br />
-            echo 0 > /sys/devices/soc/c177000.i2c/i2c-3/3-0038/fts_gesture_mode</code>
-            </li>
-            <li class="collection-item">* Fixed minimum brightness for Xiaomi Mi Pad 4.<br />
-            NOTE: Currently notification LED is half broken.</li>
-            <li class="collection-item">* Enabled Wireless display.</li>
           </ul>
-          Source: <a href="https://github.com/AndroPlus-org?tab=repositories">GitHub</a>
+          * Currently, only arm64 a-only image works. We need more investigation for A/B image...<br />
+          Source: <a href="https://github.com/folokorom-gsi">GitHub</a><br />
+          Please visit <a href="https://floko.maud.io/">FlokoROM official website</a> for more info.
         </div>
         <div class="col l2"></div>
       </div>
@@ -215,57 +155,26 @@
         <div class="col l2"></div>
         <div class="col l8">
           <ol class="collection">
-            <li class="collection-item">Download GSI for your device<br /> If your device is arm64 and supports A/B seamless update, download "system-arm64-ab-vanilla-nosu.img"<br />
-            If your device is arm64 and doesn't support A/B seamless update, download "system-arm64-aonly-vanilla-nosu.img"</li>
+            <li class="collection-item">Download GSI for your device<br />
+            NOTE: <br />
+            Project Treble has two version - if your device was shipped with Android 9+, it's Treble-ready. If your device was shipped with Android 8.x or lower, it's "Legacy Treble" device.<br />
+            <br />
+            For Treble-ready devices: <br />
+            If your device is arm64, download "system-arm64-ab-vanilla-nosu.img"<br />
+            <br />
+            For "Legacy Treble" devices: <br />
+            If your device is arm64 and supports A/B seamless update, download "system-arm64-ab-vanilla-nosu.img"<br />
+            If your device is arm64 and doesn't support A/B seamless update, download "system-arm64-aonly-vanilla-nosu.img"<br />
+            <br />
+            ...If your device is arm, sorry we don't have build for it.</li>
             <li class="collection-item">Reboot to bootloader or recovery</li>
-            <li class="collection-item">Flash/install to system</li>
+            <li class="collection-item">Flash/install to system<br />
+            e.g. If you are in fastboot mode: <br />
+            fastboot flash system [insert image name here]</li>
             <li class="collection-item">If you need Google apps, flash GApps ZIP in recovery before rebooting</li>
-            <li class="collection-item">(Optional) Do factory reset if you flashed AICP GSI over other roms</li>
+            <li class="collection-item">(Optional) Do factory reset if you flashed GSI over other roms</li>
             <li class="collection-item">Profit!</li>
             NOTE: Please don't use third-party custom rom (e.g. Xiaomi.eu roms) as the base rom. Some hacky roms have wrong (unofficial) fingerprint and GSI can't detect what device you are using.
-          </ol>
-        </div>
-        <div class="col l2"></div>
-      </div>
-      <br>
-      <br>
-    </div>
-  </div>
-
-  <div class="section no-pad-bot" id="diff">
-    <div class="container">
-      <div class="row center">
-        <h4 class="header col s12 light">Differences between AICP and AICP-mordiford</h4>
-      </div>
-      <div class="row">
-        <div class="col l2"></div>
-        <div class="col l8">
-          <ol class="collection">
-            <li class="collection-item">
-              <a href="https://github.com/mordiford/frameworks_base">frameworks_base</a>:<br />
-               Screenshot: Move imageDate to forward
-            </li>
-            <li class="collection-item">
-              <a href="https://github.com/mordiford/lineage-sdk">lineage-sdk</a>:<br />
-              Add Japanese translation for accent color
-            </li>
-            <li class="collection-item">
-              <a href="https://github.com/mordiford/packages_apps_AicpExtras">packages_apps_AicpExtras</a>:<br />
-              Update Japanese translation<br />
-              Change Easter egg
-            </li>
-            <li class="collection-item">
-              <a href="https://github.com/mordiford/packages_apps_DUI">packages_apps_DUI</a>:<br />
-              Add DUI
-            </li>
-            <li class="collection-item">
-              <a href="https://github.com/mordiford/vendor_aicp">vendor_aicp</a>:<br />
-              bootanimation: Disable randomize<br />
-              packages: Remove Eleven<br />
-              version: Stop override USER to android-build<br />
-            </li>
-            NOTE: AICP-mordiford is unofficial build. Please do not post any bug reports or issues to AICP official community.<br />
-            You can donate to AICP official team at <a href="http://aicp-rom.com/">official page</a>.
           </ol>
         </div>
         <div class="col l2"></div>
@@ -293,7 +202,7 @@
             Please search at APKMirror and install 1 to 4 in order, then reboot to recovery and flash Open GApps.
             </li>
             <li class="collection-item">Q. My device doesn't recognize IMEI / can't use Dual SIM.<br />
-            A. Currently treble roms can't use Dual SIM (SIM slot 2). Please insert SIM to slot 1 and leave slot 2 empty.</li>
+            A. Currently some devices can't use Dual SIM (SIM slot 2). Please insert SIM to slot 1 and leave slot 2 empty.</li>
             <li class="collection-item">Q. MTP is not working! How can I enable?<br />
             A. Please open developer option and change USB config. If it doesn't work, check if your PC is recognizing your device as MTP device in device manager. Often Windows recognize the device as "Unknown" and you have to manually set/install MTP driver for the unknown device.</li>
             <li class="collection-item">Q. How can I fix rounded cornor?<br />
@@ -325,17 +234,65 @@
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
-          AICP O 13.1:<br />
-          <ul class="collection">
-            <li class="collection-item"><s><a href="https://androplus.org/Entry/6713/">SHARP AQUOS S2</a> (Snapdragon 630)</s></li>
-            <li class="collection-item"><a href="https://androplus.org/Entry/7151/">UMIDIGI Z2</a> (MediaTek MT6763) - buy at <a href="https://www.gearbest.com/cell-phones/pp_1845863.html?wid=1817324&lkid=15410345">GearBest</a> or <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FUMIDIGI-Z2-Special-Edition-Global-Bands-6-2-FHD-Full-Screen-Helio-P23-4G-64GB-F%2F32904068985.html">AliExpress</a></li>
-            <li class="collection-item"><a href="https://androplus.org/Entry/7320/">Xiaomi Mi Pad 4</a> / <a href="https://androplus.org/Entry/7255/">Mi Pad 4 Plus</a> (Snapdragon 660) - buy at <a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&url=5091">Geekbuying</a>, <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-mipad-4-Tablets-4-8-10-1-Snapdragon-660-AIE-13MP%2F32888553563.html">AliExpress</a> or <a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjUxMzEwMjc5Lmh0bWwiLCJ0eXBlIjoiMSJ9&utm_source=Aff44&utm_medium=affiliate">JoyBuy</a></li>
-          </ul>
-          AICP P 14.0:<br />
-          <ul class="collection">
-          <li class="collection-item"><a href="https://androplus.org/Entry/7588/">Xiaomi Mi MIX 2S</a> (Snapdragon 845) - buy at <a href="https://www.gearbest.com/cell-phones/pp_1698637.html?wid=1349303&lkid=16048938">GearBest</a>, <a href="https://aliex.shop/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FIn-Stock-Global-Version-Xiaomi-Mi-Mix-2S-6GB-64GB-Snapdragon-845-Face-ID-NFC-5%2F32866564127.html">AliExpress</a> or <a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjUwODg3OTUwLmh0bWwiLCJ0eXBlIjoiMSJ9">JoyBuy</a></li>
-          <li class="collection-item"><a href="https://androplus.org/Entry/7908/">Xiaomi Pocophone F1</a> (Snapdragon 845) - buy at <a href="https://www.gearbest.com/cell-phones/pp_009729060225.html?wid=1349303&lkid=17718381">GearBest</a>, <a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&url=129610">Geekbuying</a>, <a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FXiaomi-POCOPHONE-F1-6GB-64GB-Global-Version-Mobile-Phone-Snapdragon-845-4000mAh-Dual-Camera-Face-Unlock%2F32951770097.html">AliExpress</a> or <a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwczovL3d3dy5qb3lidXkuY29tLzY1MTUwODQ5OC5odG1sIiwidHlwZSI6IjYifQ==">JoyBuy</a></li>
-          </ul>
+          <div class="cstmreba">
+          <div class="kaerebalink-box">
+          <div class="kaerebalink-image"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html" target="_blank" rel="nofollow"><img src="img/perseus.png" style="border: none;" class="" height="200" /></a></div>
+          <div class="kaerebalink-info">
+          <div class="kaerebalink-name"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html" target="_blank" rel="nofollow">Xiaomi Mi MIX 3</a>
+          <div class="kaerebalink-powered-date"></div>
+          </div>
+          <div class="kaerebalink-detail">Xiaomi</div>
+          <div class="kaerebalink-link1">
+          <div class="shoplinkyahoo"><a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&amp;url=139773
+          " target="_blank" rel="nofollow">GeekBuying</a></div>
+          <div class="shoplinkrakuten tiananmen64"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fstore%2Fproduct%2FNew-Original-Xiaomi-Mi-Mix-3-6GB-RAM-128GB-ROM-Mobile-Phone-Snapdragon-845-Octa-Core%2F311331_32948657626.html" target="_blank" rel="nofollow">Aliexpress</a></div>
+          <div class="shoplinkamazon tiananmen64"><a href="https://ad.admitad.com/g/e8f129b05ec139a7aa7e6213826a88/?ulp=https%3A%2F%2Fwww.banggood.com%2FXiaomi-Mi-MIX-3-6_39-inch-6GB-RAM-128GB-ROM-Snapdragon-845-Octa-core-Smartphone-p-1371094.html" target="_blank" rel="nofollow">Banggood</a></div>
+          <div class="shoplinkyahoo tiananmen64"><a href="https://www.gearbest.com/cell-phones/pp_009427083237.html?wid=1433363&amp;lkid=16942682" target="_blank" rel="nofollow">GearBest</a></div>
+          <div class="shoplinkrakuten tiananmen64"><a href="http://shrsl.com/19ce4" target="_blank" rel="nofollow">GIZTOP</a></div>
+          </div>
+          </div>
+          <div class="booklink-footer"></div>
+          </div>
+          </div>
+
+          <div class="cstmreba">
+          <div class="kaerebalink-box">
+          <div class="kaerebalink-image"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-Plus-MiPad-4-10-1-PC-Tablet-Snapdragon-660-Octa-Core%2F32911320293.html" target="_blank" rel="nofollow"><img src="https://androplus.org/wp/wp-content/uploads/2018/12/specs_mipad4p_header_b.jpg" style="border: none; width: 200px;" /></a></div>
+          <div class="kaerebalink-info">
+          <div class="kaerebalink-name"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-Plus-MiPad-4-10-1-PC-Tablet-Snapdragon-660-Octa-Core%2F32911320293.html" target="_blank" rel="nofollow">Xiaomi Mi Pad 4 Plus</a>
+          <div class="kaerebalink-powered-date"></div>
+          </div>
+          <div class="kaerebalink-detail">Xiaomi</div>
+          <div class="kaerebalink-link1">
+          <div class="shoplinkamazon"><a href="https://ad.admitad.com/g/e8f129b05ec139a7aa7e6213826a88/?ulp=https%3A%2F%2Fwww.banggood.com%2FOriginal-Box-Xiaomi-Mi-Pad-4-Plus-CN-ROM-Snapdragon-660-4G-RAM-64G-MIUI-9_0-10_1-Inch-Tablet-Black-p-1344444.html" target="_blank" rel="nofollow">Banggood</a></div>
+          <div class="shoplinkrakuten"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-Plus-MiPad-4-10-1-PC-Tablet-Snapdragon-660-Octa-Core%2F32911320293.html" target="_blank" rel="nofollow">AliExpress</a></div>
+          <div class="shoplinkyahoo"><a href="https://www.gearbest.com/tablet-pcs/pp_009806986057.html?wid=1433363&amp;lkid=17578135" target="_blank" rel="nofollow">GearBest</a></div>
+          <div class="shoplinkamazon"><a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&amp;url=13848" target="_blank" rel="nofollow">GeekBuying</a></div>
+          <div class="shoplinkrakuten"><a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjAwMzc3ODI1Lmh0bWwiLCJ0eXBlIjoiMSJ9" target="_blank" rel="nofollow">JoyBuy</a></div>
+          </div>
+          </div>
+          <div class="booklink-footer"></div>
+          </div>
+          </div>
+
+          <div class="cstmreba">
+          <div class="kaerebalink-box">
+          <div class="kaerebalink-image"><a href="https://www.gearbest.com/cell-phones/pp_009249572817.html?wid=1817324&amp;lkid=19401505" target="_blank" rel="nofollow"><img src="https://androplus.org/wp/wp-content/uploads/2019/01/f1_red-400x490.png" style="border: none;" class="" width="120" /></a></div>
+          <div class="kaerebalink-info">
+          <div class="kaerebalink-name"><a href="https://www.gearbest.com/cell-phones/pp_009249572817.html?wid=1817324&amp;lkid=19401505" target="_blank" rel="nofollow">UMIDIGI F1</a>
+          <div class="kaerebalink-powered-date"></div>
+          </div>
+          <div class="kaerebalink-detail">UMIDIGI</div>
+          <div class="kaerebalink-link1">
+          <div class="shoplinkyahoo"><a href="https://www.gearbest.com/cell-phones/pp_009249572817.html?wid=1817324&amp;lkid=19401505" target="_blank" rel="nofollow">GearBest</a></div>
+          <div class="shoplinkrakuten tiananmen64"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FUMIDIGI-F1-Android-9-0-6-3-FHD-128GB-ROM-4GB-RAM-Helio-P60-5150mAh-Big%2F32961635422.html" target="_blank" rel="nofollow">AliExpress</a></div>
+          <div class="shoplinkamazon tiananmen64"><a href="https://amzn.to/2CAF10c" target="_blank" rel="nofollow">Amazon</a></div>
+          </div>
+          </div>
+          <div class="booklink-footer"></div>
+          </div>
+          </div>
+          * <a href="https://androplus.org/Entry/2886/">Xperia XZ F8332</a><br />
           Note: All Project Treble enabled devices should work. <a href="https://github.com/phhusson/treble_experimentations/wiki">Some are listed here.</a>
         </div>
         <div class="col l2"></div>
@@ -348,17 +305,17 @@
   <div class="section no-pad-bot" id="diff">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">Wait, what is AICP P 14.0?</h4>
+        <h4 class="header col s12 light">Looking for AICP-mordiford GSI?</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
-          AICP P 14.0 is the next version of AICP based on Android 9 Pie. It's in development and there are less features and more bugs than Oreo for now. Please do not ask me or AICP official team to fix the bugs.
+          AICP-mordiford was based on AICP O 13.1 (Android 8.1 Oreo). We stopped building it since official AICP team stopped security update for Oreo.
         </div>
         <div class="col l2"></div>
       </div>
       <div class="row center">
-          <a href="https://drive.google.com/open?id=1XP1e5n3_IQ6uyW_bF1-hly4SA87s2tJ7" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a>
+        <a href="https://drive.google.com/open?id=1LtPNR6R4dxJslXFIjpF9FhyfEfhBTCOa" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a>
       </div>
       <br>
       <br>
@@ -380,6 +337,7 @@
             <li class="collection-item"><a href="http://amzn.asia/bEAXNPE">Amazon Wish List (JP)</a></li>
             <li class="collection-item"><a href="kyash://qr/u/6648500031183503227">Kyash (JP): androplus</a></li>
           </ul>
+          Also please support <a href="https://floko.maud.io/docs/p9.0/#Donation">hota, the main developer of FlokoROM</a>.
         </div>
         <div class="col l2"></div>
       </div>
@@ -392,11 +350,9 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="black-text">What is AICP-mordiford?</h5>
+          <h5 class="black-text">What is FlokoROM?</h5>
           <p class="black-text text-lighten-4">
-            AICP (Android Ice Cold Project) is a LineageOS based custom rom for Android. hota (the administrator of
-            <a href="https://mstdn.maud.io/">:don:</a>, one of the most popular Matsudai) added some improvements
-            like screenshot name, Japanese translation update and kawaii easter egg in AICP Extras.
+            FlokoROM is the rebranded ROM based on AICP. hota (the administrator of <a href="https://mstdn.maud.io/">:don:</a>, one of the most popular Matsudai) added some features, tested and improved Japanse translations, and sent these patches to AICP.
           </p>
 
 
@@ -405,10 +361,7 @@
           <h5 class="black-text">Links</h5>
           <ul>
             <li>
-              <a href="http://aicp-rom.com/">AICP Official</a>
-            </li>
-            <li>
-              <a href="https://wiki.maud.io/aicp/oreo">AICP-mordiford Wiki</a>
+              <a href="https://floko.maud.io/">FlokoROM Official</a>
             </li>
             <li>
               <a href="https://github.com/phhusson/treble_experimentations/wiki">Phh-Treble Wiki</a>
