@@ -52,6 +52,7 @@ body{
 }
 #logo-container,.title-logo{
   font-family: 'Comfortaa', cursive;
+  text-align: center;
 }
 
 .page-footer {
