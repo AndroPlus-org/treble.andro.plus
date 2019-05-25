@@ -174,7 +174,11 @@
             <li class="collection-item">Flash/install to system<br />
             e.g. If you are in fastboot mode: <br />
             fastboot flash system [insert image name here]</li>
-            <li class="collection-item">If you need Google apps, flash GApps ZIP in recovery before rebooting</li>
+            <li class="collection-item">On some devices with vbmeta partition, you have to disable it by flashing <a href="https://github.com/TadiT7/xiaomi_cepheus_dump/raw/cepheus-user-9-PKQ1.181121.001-9.3.1-release-keys/firmware-update/vbmeta.img">vbmeta.img</a><br />
+            e.g.<br />
+            fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</li>
+            <li class="collection-item">(Optional) If you need Google apps, flash GApps ZIP in recovery before rebooting<br />
+            NOTE: You need to navigate to Wipe > Advance Wipe > Data, and choose Repair or Change File System and press "Resize File System" on TWRP, then mount system at Mount menu before installing GApps ZIP</li>
             <li class="collection-item">(Optional) Do factory reset if you flashed GSI over other roms</li>
             <li class="collection-item">Profit!</li>
             NOTE: Please don't use third-party custom rom (e.g. Xiaomi.eu roms) as the base rom. Some hacky roms have wrong (unofficial) fingerprint and GSI can't detect what device you are using.
