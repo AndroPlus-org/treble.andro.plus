@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -49,12 +49,14 @@
   <link rel="manifest" href="/img/manifest.json">
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@400;700&family=Material+Icons&display=swap" />
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@400;700&family=Material+Icons&display=swap"
+  media="print" onload="this.media='all'" />
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css?v=201903" type="text/css" rel="stylesheet" media="screen,projection" />
- <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat" rel="stylesheet"> 
-
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+  <link href="css/style.css?v=202107" type="text/css" rel="stylesheet" media="screen,projection" />
 
   <script>
     var ua = navigator.userAgent;
@@ -98,10 +100,13 @@
       <br>
       <h1 class="header center akane-red-text title-logo">FlokoROM GSI</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Unofficial FlokoROM GSI for Project Treble ready devices&#x1f496;</h5>
+        <h5 class="header col s12 light">Project Treble 対応端末向けの*非公式*な FlokoROM GSI です&#x1f496;</h5>
       </div>
       <div class="row center">
-        <a href="https://drive.google.com/open?id=1Und0ubXS7hNT_26YduVVXXJ5-MUVAsSq" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a>
+        <a href="https://drive.google.com/drive/folders/1BFNq3_lvezoLBSfGJn7gLQEUNt2QKho-?usp=sharing" id="download-button" class="btn-large waves-effect waves-light akane-red">ダウンロード</a>
+      </div>
+      <div class="row center">
+        <h5 class="header col s12 light">SORRY JAPANESE ONLY<br />あなたは〇〇人目のお客様です</h5>
       </div>
       <br>
       <br>
@@ -120,22 +125,17 @@
   <div class="section no-pad-bot" id="changes">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">Our GSI-specific changes</h4>
+        <h4 class="header col s12 light">GSI 独自の変更点</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
           <ul class="collection">
-            <li class="collection-item">* Changes model name based on vendor implementation instead of just "Phh-Treble vanilla".</li>
-            <li class="collection-item">* Use Snap instead of AOSP camera app.</li>
-            <li class="collection-item">* Add patch for Mi 9/Mi 9 SE framework.</li>
-            <li class="collection-item">* Add patch for Mi 9/Mi 9 SE fingerprint sensor (not working on AOD/smart pixel).</li>
-            <li class="collection-item">* Add patch for OnePlus 7 / 7 Pro framework.</li>
-            <li class="collection-item">* Add command for OnePlus 7 / 7 Pro to popup in-camera. (run "oneplus-motor up" to popup and "oneplus-motor down" to down. <a href="https://gist.github.com/AndroPlus-org/ec689961afc11b778504c6ca8e429fb5">Here is Tasker example</a> for face unlocking)</li>
+            <li class="collection-item">* "Phh-Treble vanilla" の代わりに vendor パーティションより端末名を自動設定</li>
           </ul>
-          * Additionally, you can install <a href="https://drive.google.com/open?id=1HCNCf6vvmxrCUzf0Z4T0bhRA871FdhgG">this Magisk Module</a> to fix BT in-call and some other things (For Mi 9 or OnePlus 7 Pro)<br />
-          Source: <a href="https://github.com/FlokoROM-GSI">GitHub</a><br />
-          <p class="fxxk">DO NOT ask hota/1indwurm to help if you are using my GSI. GSI is not maintained by him. If people continues to annoy him, I'll stop building.</p>
+          ソースコード: <a href="https://github.com/FlokoROM-GSI">GitHub</a><br />
+          <p class="fxxk">この GSI を使用している際の不具合については hota/lindwurm 氏に質問しないでください。この GSI はあくまで非公式なもので、公式版とは異なります。</p>
+          <p class="fxxk">DO NOT ask hota/lindwurm to help if you are using my GSI. GSI is not maintained by him.</p>
         </div>
         <div class="col l2"></div>
       </div>
@@ -154,72 +154,26 @@
   <div class="section no-pad-bot" id="howto">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">How to flash</h4>
+        <h4 class="header col s12 light">焼き方</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
           <ol class="collection">
-            <li class="collection-item">Download GSI for your device<br />
-            NOTE: <br />
-            Project Treble has two version - if your device was shipped with Android 9+, it's Treble-ready. If your device was shipped with Android 8.x or lower, it's "Legacy Treble" device.<br />
-            <br />
-            For Treble-ready devices: <br />
-            If your device is arm64, download "system-arm64-ab-vanilla-nosu.img"<br />
-            <br />
-            For "Legacy Treble" devices: <br />
-            If your device is arm64 and supports A/B seamless update, download "system-arm64-ab-vanilla-nosu.img"<br />
-            If your device is arm64 and doesn't support A/B seamless update, download "system-arm64-aonly-vanilla-nosu.img"<br />
-            <br />
-            ...If your device is arm, sorry we don't have build for it.</li>
-            <li class="collection-item">Reboot to bootloader or recovery</li>
-            <li class="collection-item">Flash/install to system<br />
-            e.g. If you are in fastboot mode: <br />
-            fastboot flash system [insert image name here]</li>
-            <li class="collection-item">On some devices with vbmeta partition, you have to disable it by flashing <a href="https://github.com/TadiT7/xiaomi_cepheus_dump/raw/cepheus-user-9-PKQ1.181121.001-9.3.1-release-keys/firmware-update/vbmeta.img">vbmeta.img</a><br />
-            e.g.<br />
+            <li class="collection-item">GSI をダウンロードする</li>
+            <li class="collection-item">Bootloader か Recovery へ再起動する<br />
+            ※最近の端末の場合、fastboot reboot fastboot を実行し FASTBOOTD にしないと焼けないことがあります</li>
+            <li class="collection-item">system へ書き込む<br />
+            fastboot での例:<br />
+            fastboot flash system [ファイル名]</li>
+            <li class="collection-item">vbmeta パーティションがある端末では vbmeta.img を焼いて無効化する必要があります。<br />
+            例:<br />
             fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</li>
-            <li class="collection-item">(Optional) If you need Google apps, flash GApps ZIP in recovery before rebooting<br />
-            NOTE: You need to navigate to Wipe > Advance Wipe > Data, and choose Repair or Change File System and press "Resize File System" on TWRP, then mount system at Mount menu before installing GApps ZIP</li>
-            <li class="collection-item">(Optional) Do factory reset if you flashed GSI over other roms</li>
-            <li class="collection-item">Profit!</li>
-            NOTE: Please don't use third-party custom rom (e.g. Xiaomi.eu roms) as the base rom. Some hacky roms have wrong (unofficial) fingerprint and GSI can't detect what device you are using.
+            <li class="collection-item">(任意) Magisk や GApps の ZIP をインストールする<br />
+            ⚠ TWRP では Wipe > Advance Wipe > Data で Repair or Change File System を選び、Resize File System を実行しないと容量不足エラーになることがあります</li>
+            <li class="collection-item">(初回のみ) Wipe Data でデータを初期化する</li>
+            ⚠ Xiaomi 端末の場合、Xiaomi.eu ではなく公式な MIUI を焼いてから GSI を焼いてください。Xiaomi.eu は端末名を偽装しているため、GSI がどの端末なのか判定できず、パッチがうまく動きません。
           </ol>
-        </div>
-        <div class="col l2"></div>
-      </div>
-      <br>
-      <br>
-    </div>
-  </div>
-
-  <div class="section no-pad-bot" id="faq">
-    <div class="container">
-      <div class="row center">
-        <h4 class="header col s12 light">FAQ</h4>
-      </div>
-      <div class="row">
-        <div class="col l2"></div>
-        <div class="col l8">
-          <ul class="collection">
-            <li class="collection-item">Q. I installed Open GApps but got many force stops...<br />
-            A. To install Open GApps without force stops, you have to install 4 apks before flashing Open GApps.<br />
-            1. com.google.android.gsf.login<br />
-            2. com.google.android.gsf<br />
-            3. com.google.android.gms<br />
-            4. com.android.vending<br />
-            Please search at APKMirror and install 1 to 4 in order, then reboot to recovery and flash Open GApps.
-            </li>
-            <li class="collection-item">Q. My device doesn't recognize IMEI / can't use Dual SIM.<br />
-            A. Currently some devices can't use Dual SIM (SIM slot 2). Please insert SIM to slot 1 and leave slot 2 empty.</li>
-            <li class="collection-item">Q. MTP is not working! How can I enable?<br />
-            A. Please open developer option and change USB config. If it doesn't work, check if your PC is recognizing your device as MTP device in device manager. Often Windows recognize the device as "Unknown" and you have to manually set/install MTP driver for the unknown device.</li>
-            <li class="collection-item">Q. How can I fix rounded cornor?<br />
-            A. Please run this command ("8" will be different for each devices):<br />
-            <code>adb shell settings put secure sysui_rounded_content_padding 8</code></li>
-            <li class="collection-item">Q. How can I get back to stock rom?<br />
-            A. You have to flash stock system image to system and wipe data in fastboot or recovery.</li>
-          </ul>
         </div>
         <div class="col l2"></div>
       </div>
@@ -231,14 +185,15 @@
   <div class="section no-pad-bot" id="diff">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">Need help?</h4>
+        <h4 class="header col s12 light">ヘルプ</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
-          There is no official support thread for FlokoROM GSI. If you really think it is GSI (ROM) issue and got the logcat, you can <a href="https://github.com/FlokoROM-GSI/treble_experimentations/issues">create issue on this repo</a>.<br />
-          If you have any problem with "hardware" (e.g. SIM is not recognized, Wi-Fi is missing), you should flash <a href="https://github.com/phhusson/treble_experimentations/releases">Phh-Treble AOSP GSI</a> and try to reploduce your problem on AOSP GSI, then get a logcat and <a href="https://github.com/phhusson/treble_experimentations/issues">make a issue on Phh's repo</a>.
-          <p class="fxxk">DO NOT ask hota/1indwurm to help if you are using my GSI. GSI is not maintained by him. If people continues to annoy him, I'll stop building.</p>
+          Phh-Treble 自体のバグではなく FlokoROM GSI 特有のバグがある場合は <a href="https://github.com/FlokoROM-GSI/treble_experimentations/issues">Create issue</a> してお知らせください。<br />
+          ハードウェアに関する問題 (例: SIM が認識されない、Wi-Fi に接続できない) がある場合は、一度 <a href="https://github.com/phhusson/treble_experimentations/releases">Phh-Treble AOSP GSI</a> を焼いてみて再現するか確認してください。もし AOSP でも同様の問題が起きていれば、logcat を取得した上で <a href="https://github.com/phhusson/treble_experimentations/issues">Phh 氏へ Issue</a> を伝えてください。
+          <p class="fxxk">この GSI を使用している際の不具合については hota/lindwurm 氏に質問しないでください。この GSI はあくまで非公式なもので、公式版とは異なります。</p>
+          <p class="fxxk">DO NOT ask hota/lindwurm to help if you are using my GSI. GSI is not maintained by him.</p>
         </div>
         <div class="col l2"></div>
       </div>
@@ -257,7 +212,7 @@
   <div class="section no-pad-bot" id="device">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">My testing devices</h4>
+        <h4 class="header col s12 light">テスト済み端末</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
@@ -265,93 +220,22 @@
           
           <div class="cstmreba">
           <div class="kaerebalink-box">
-          <div class="kaerebalink-image"><a href="http://ali.ski/jdD9vf" target="_blank" rel="nofollow"><img src="https://androplus.org/wp/wp-content/uploads/2019/02/m9-313x600.png" style="width: 100px; border: none;" class="" /></a></div>
+          <div class="kaerebalink-image"><a href="https://androplus.org/entry/mi-11-lite-5g-japan-review/" target="_blank" rel="nofollow"><img src="https://androplus.org/wp/wp-content/uploads/2021/07/reno06-400x253.jpg" style="width: 200px; border: none;" class="" /></a></div>
           <div class="kaerebalink-info">
           <div class="kaerebalink-name">
-          <p><a href="http://ali.ski/jdD9vf" target="_blank" rel="nofollow">Xiaomi Mi 9</a></p>
-          <div class="kaerebalink-powered-date"></div>
+          <p><a href="https://androplus.org/entry/mi-11-lite-5g-japan-review/" target="_blank" rel="nofollow">Xiaomi Mi 11 Lite 5G 日本版</a></p>
           </div>
-          <div class="kaerebalink-detail">Xiaomi</div>
           <div class="kaerebalink-link1">
-          <div class="shoplinkrakuten"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F-%2F32974253610.html" target="_blank" rel="nofollow">AliExpress</a></div>
-          <div class="shoplinkamazon"><a href="http://fas.st/QutGB" target="_blank" rel="nofollow">Banggood</a></div>
-          <div class="shoplinkyahoo"><a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&amp;url=165118" target="_blank" rel="nofollow">GeekBuying</a></div>
-          <div class="shoplinkrakuten"><a href="http://shrsl.com/1gy9e" target="_blank" rel="nofollow">GIZTOP</a></div>
-          <div class="shoplinkamazon"><a href="https://amzn.to/2Uj4uCX" target="_blank" rel="nofollow">Amazon.it</a></div>
-          <div class="shoplinkyahoo"><a href="https://rover.ebay.com/rover/1/711-53200-19255-0/1?mpre=https%3A%2F%2Fwww.ebay.com%2Fitm%2FGlobal-ROM-Xiaomi-Mi-9-6-39-128GB-MIUI-10-Snapdragon-855-48MP-NFC-Smartphone%2F143160308356%3Fhash%3Ditem215504f284%3Am%3Am4TSzT77rGnVqpJWHd8Szmg%26frcectupt%3Dtrue&amp;campid=5338194133&amp;toolid=20008" target="_blank" rel="nofollow">eBay</a></div>
+          <div class="shoplinkamazon"><a href="https://androplus.org/entry/mi-11-lite-5g-japan-review/" target="_blank" rel="nofollow">レビューはこちら</a></div>
           </div>
           </div>
           <div class="booklink-footer"></div>
           </div>
           </div>
 
-          <div class="cstmreba">
-          <div class="kaerebalink-box">
-          <div class="kaerebalink-image"><a href="https://www.oneplus.com/invite#NfFP7gZSgFi2moFPA9NDQ1" target="_blank" rel="nofollow"><img src="https://androplus.org/wp/wp-content/uploads/2019/05/cap_2019-05-15_205647.jpg" style="width: 150px; border: none;" class="" /></a></div>
-          <div class="kaerebalink-info">
-          <div class="kaerebalink-name">
-          <p><a href="https://www.oneplus.com/invite#NfFP7gZSgFi2moFPA9NDQ1" target="_blank" rel="nofollow">OnePlus 7 Pro</a></p>
-          <div class="kaerebalink-powered-date"></div>
-          </div>
-          <div class="kaerebalink-detail">OnePlus</div>
-          <div class="kaerebalink-link1">
-          <div class="shoplinkrakuten"><a href="https://www.oneplus.com/invite#NfFP7gZSgFi2moFPA9NDQ1" target="_blank" rel="nofollow">OnePlus</a></div>
-          <div class="shoplinkamazon tiananmen64"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FGlobal-Firmware-Oneplus-7-Pro-Mobile-Phone-6-67-inch-Android-9-Snapdragon-855-6G-8G%2F33010431303.html" target="_blank" rel="nofollow">AliExpress</a></div>
-          <div class="shoplinkyahoo tiananmen64"><a href="http://shrsl.com/1ltu6" target="_blank" rel="nofollow">GIZTOP</a></div>
-          <div class="shoplinkrakuten tiananmen64"><a href="https://px.a8.net/svt/ejp?a8mat=2NX1SK+4ZSXGY+3EIU+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fjp.etoren.com%2Fproducts%2Foneplus-7-pro-gm1910-dual-sim-128gb-grey-6gb-ram-" target="_blank" rel="nofollow">ETOREN</a></div>
-          <div class="shoplinkamazon tiananmen64"><a href="https://amzn.to/2M5bovQ" target="_blank" rel="nofollow">Amazon.it</a></div>
-          <div class="shoplinkyahoo tiananmen64"><a href="http://fas.st/vndaqQ" target="_blank" rel="nofollow">GeekBuying</a></div>
-          <div class="shoplinkrakuten"><a href="https://jp.gearbest.com/cell-phones/pp_009360569671.html?lkid=37341261" target="_blank" rel="nofollow">GearBest</a></div>
-          </div>
-          </div>
-          <div class="booklink-footer"></div>
-          </div>
-          </div>
-
-          <div class="cstmreba">
-          <div class="kaerebalink-box">
-          <div class="kaerebalink-image"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-Plus-MiPad-4-10-1-PC-Tablet-Snapdragon-660-Octa-Core%2F32911320293.html" target="_blank" rel="nofollow"><img src="https://androplus.org/wp/wp-content/uploads/2018/12/specs_mipad4p_header_b.jpg" style="border: none; width: 200px;" /></a></div>
-          <div class="kaerebalink-info">
-          <div class="kaerebalink-name"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-Plus-MiPad-4-10-1-PC-Tablet-Snapdragon-660-Octa-Core%2F32911320293.html" target="_blank" rel="nofollow">Xiaomi Mi Pad 4 Plus</a>
-          <div class="kaerebalink-powered-date"></div>
-          </div>
-          <div class="kaerebalink-detail">Xiaomi</div>
-          <div class="kaerebalink-link1">
-          <div class="shoplinkamazon"><a href="https://ad.admitad.com/g/e8f129b05ec139a7aa7e6213826a88/?ulp=https%3A%2F%2Fwww.banggood.com%2FOriginal-Box-Xiaomi-Mi-Pad-4-Plus-CN-ROM-Snapdragon-660-4G-RAM-64G-MIUI-9_0-10_1-Inch-Tablet-Black-p-1344444.html" target="_blank" rel="nofollow">Banggood</a></div>
-          <div class="shoplinkrakuten"><a href="https://alitems.com/g/1e8d114494c139a7aa7e16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FOriginal-Xiaomi-Mi-Pad-4-Plus-MiPad-4-10-1-PC-Tablet-Snapdragon-660-Octa-Core%2F32911320293.html" target="_blank" rel="nofollow">AliExpress</a></div>
-          <div class="shoplinkyahoo"><a href="https://www.gearbest.com/tablet-pcs/pp_009806986057.html?wid=1433363&amp;lkid=17578135" target="_blank" rel="nofollow">GearBest</a></div>
-          <div class="shoplinkamazon"><a href="https://affiliate.geekbuying.com/gkbaffiliate.php?id=213&amp;url=13848" target="_blank" rel="nofollow">GeekBuying</a></div>
-          <div class="shoplinkrakuten"><a href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY0NCIsImxpbmsiOiJodHRwOi8vd3d3LmpveWJ1eS5jb20vNjAwMzc3ODI1Lmh0bWwiLCJ0eXBlIjoiMSJ9" target="_blank" rel="nofollow">JoyBuy</a></div>
-          </div>
-          </div>
-          <div class="booklink-footer"></div>
-          </div>
-          </div>
-
-          * <a href="https://androplus.org/Entry/2886/">Xperia XZ F8332</a><br />
-          Note: All Project Treble enabled devices should work. <a href="https://github.com/phhusson/treble_experimentations/wiki">Some are listed here.</a>
+          Project Treble 対応端末ならだいたい何でも動くはずです。<a href="https://github.com/phhusson/treble_experimentations/wiki">こちらにその他の端末のリスト</a>があります。
         </div>
         <div class="col l2"></div>
-      </div>
-      <br>
-      <br>
-    </div>
-  </div>
-
-  <div class="section no-pad-bot" id="diff">
-    <div class="container">
-      <div class="row center">
-        <h4 class="header col s12 light">Looking for AICP-mordiford GSI?</h4>
-      </div>
-      <div class="row">
-        <div class="col l2"></div>
-        <div class="col l8">
-          AICP-mordiford was based on AICP O 13.1 (Android 8.1 Oreo). We stopped building it since official AICP team stopped security update for Oreo.
-        </div>
-        <div class="col l2"></div>
-      </div>
-      <div class="row center">
-        <a href="https://drive.google.com/open?id=1LtPNR6R4dxJslXFIjpF9FhyfEfhBTCOa" id="download-button" class="btn-large waves-effect waves-light akane-red">Download</a>
       </div>
       <br>
       <br>
@@ -361,19 +245,15 @@
   <div class="section no-pad-bot" id="support">
     <div class="container">
       <div class="row center">
-        <h4 class="header col s12 light">We need your support</h4>
+        <h4 class="header col s12 light">支援する</h4>
       </div>
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
-          My build server is also my daily driver, so I can only build the rom at weekend. I want dedicated PC for the building...
           <ul class="collection">
             <li class="collection-item"><a href="https://www.paypal.me/androplus">PayPal</a></li>
-            <li class="collection-item"><a href="https://amzn.to/2RaNEI9">Amazon Wish List (US)</a></li>
-            <li class="collection-item"><a href="http://amzn.asia/bEAXNPE">Amazon Wish List (JP)</a></li>
-            <li class="collection-item"><a href="kyash://qr/u/6648500031183503227">Kyash (JP): androplus</a></li>
+            <li class="collection-item"><a href="http://amzn.to/2YzEzwb">Amazon ほしい物リスト</a></li>
           </ul>
-          Also please support <a href="https://floko.maud.io/docs/p9.0/#Donation">hota, the main developer of FlokoROM</a>.
         </div>
         <div class="col l2"></div>
       </div>
@@ -386,18 +266,18 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="black-text">What is FlokoROM?</h5>
+          <h5 class="black-text">FlokoROM とは?</h5>
           <p class="black-text text-lighten-4">
-            FlokoROM is the custom (aftermarket) ROM based on crDroid. hota (the administrator of <a href="https://mstdn.maud.io/">:don:</a>, one of the most popular Matsudai) added some features and improved Japanse translations.
+            FlokoROM は crDroid をベースとしたカスタム ROM です。<a href="https://floko.maud.io">詳しくはこちら</a>
           </p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="black-text">Links</h5>
+          <h5 class="black-text">リンク</h5>
           <ul>
             <li>
-              <a href="https://floko.maud.io/">FlokoROM Official</a>
+              <a href="https://floko.maud.io/">FlokoROM 公式サイト</a>
             </li>
             <li>
               <a href="https://github.com/phhusson/treble_experimentations/wiki">Phh-Treble Wiki</a>
@@ -416,7 +296,7 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
