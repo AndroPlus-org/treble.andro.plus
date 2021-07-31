@@ -100,7 +100,7 @@
       <br>
       <h1 class="header center akane-red-text title-logo">FlokoROM GSI</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Project Treble 対応端末向けの*非公式*な FlokoROM GSI です</h5>
+        <h5 class="header col s12 light">Project Treble 対応端末向けの*非公式*な FlokoROM v4 GSI です</h5>
       </div>
       <div class="row center">
         <a href="https://drive.google.com/drive/folders/1BFNq3_lvezoLBSfGJn7gLQEUNt2QKho-?usp=sharing" id="download-button" class="btn-large waves-effect waves-light akane-red">ダウンロード</a>
@@ -114,7 +114,8 @@
     </div>
   </div>
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0606165858439985"
+     crossorigin="anonymous"></script>
   <!-- treble -->
   <ins class="adsbygoogle center" style="display:block" data-ad-client="ca-pub-0606165858439985" data-ad-slot="1846932708"
     data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -131,7 +132,8 @@
         <div class="col l2"></div>
         <div class="col l8">
           <ul class="collection">
-            <li class="collection-item">* Xiaomi Mi 11 Lite 5G向けパッチ追加</li>
+            <li class="collection-item">* Securize と同等の状態に変更 (vendor から端末情報を読み取りセットします)</li>
+            <li class="collection-item">* Xiaomi Mi 11 Lite 5G 向けパッチ追加</li>
           </ul>
           ソースコード: <a href="https://github.com/FlokoROM-GSI">GitHub</a><br />
           <p class="fxxk">この GSI を使用している際の不具合については hota/lindwurm 氏に質問しないでください。この GSI はあくまで非公式なもので、公式版とは異なります。</p>
@@ -190,6 +192,27 @@
       <div class="row">
         <div class="col l2"></div>
         <div class="col l8">
+          <ul class="collection">
+            <li class="collection-item">Q. Google 系サービスが使えない</li>
+            <li class="collection-item">A. <a href="https://opengapps.org">Open GApps</a> か、<a href="https://github.com/wacko1805/magiskgapps">MagiskGapps</a> をインストールしてください。<br />
+            なお、元々 GMS 非対応の端末では動作しない可能性があります。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. SafetyNet が通らない</li>
+            <li class="collection-item">A. <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> を使ってください。Google Pay は <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GPay-SQLite-Fix</a> で動作させられます。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. Xiaomi 端末で動作がおかしい</li>
+            <li class="collection-item">A. Xiaomi.eu のロムを焼いていませんか? 端末偽装のせいで動作がおかしくなるため、必ず Xiaomi 公式のロムを焼いてください。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. FlokoROM GSI のサイトが開けない</li>
+            <li class="collection-item">A. 英語を使っているのに英語が読めない人が多数いて迷惑行為が頻発していたため、海外からは閲覧できないように制限しています。IP アドレスを元に国情報を取得していますが、日本以外からアクセスしていると誤判定されているとサイトが開けなくなります。日本語を理解できる方であれば、VPN 等を使って回避してください。</li>
+          </ul>
+
           Phh-Treble 自体のバグではなく FlokoROM GSI 特有のバグがある場合は <a href="https://github.com/FlokoROM-GSI/treble_experimentations/issues">Create issue</a> してお知らせください。<br />
           ハードウェアに関する問題 (例: SIM が認識されない、Wi-Fi に接続できない) がある場合は、一度 <a href="https://github.com/phhusson/treble_experimentations/releases">Phh-Treble AOSP GSI</a> を焼いてみて再現するか確認してください。もし AOSP でも同様の問題が起きていれば、logcat を取得した上で <a href="https://github.com/phhusson/treble_experimentations/issues">Phh 氏へ Issue</a> を伝えてください。
           <p class="fxxk">この GSI を使用している際の不具合については hota/lindwurm 氏に質問しないでください。この GSI はあくまで非公式なもので、公式版とは異なります。</p>
