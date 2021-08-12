@@ -199,8 +199,45 @@
           </ul>
 
           <ul class="collection">
+            <li class="collection-item">Q. Magisk のインストールは?</li>
+            <li class="collection-item">A. GSI 専用の Magisk を使う必要はありません。通常通り<a href="https://github.com/topjohnwu/Magisk/releases">こちらからダウンロード</a>してインストールしてください。<br />
+            boot イメージが手元にない場合は、<a href="https://androplus.org/entry/android-dynamic-system-updates/">DSU Loader</a> を使う方法などで標準ロムのパーティションイメージを取り出してください。</li>
+          </ul>
+
+          <ul class="collection">
             <li class="collection-item">Q. SafetyNet が通らない</li>
             <li class="collection-item">A. <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> を使ってください。Google Pay は <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GPay-SQLite-Fix</a> で動作させられます。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. 音の再生ができない、Bluetooth が機能しない</li>
+            <li class="collection-item">A. 設定の Phh Treble Settings にて、<br />
+            Misc features → Disable audio effects<br />
+            Misc features → Force-disable A2DP offload<br />
+            Qualcomm features → Use alternate audio policy<br />
+            をオンにしてみてください。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. 明るさの自動調整がおかしい</li>
+            <li class="collection-item">A. 設定の Phh Treble Settings にて、<br />
+            Misc features → Use linear screen brightness slider<br />
+            Misc features → Force alternative backlight scale<br />
+            をオンにしてみてください。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. リフレッシュレートや解像度の変更をしたい</li>
+            <li class="collection-item">A. 設定の Phh Treble Settings にて、<br />
+            Misc features → Force FPS<br />
+            で変更できます。</li>
+          </ul>
+
+          <ul class="collection">
+            <li class="collection-item">Q. 画面の角がはみ出てしまう、角丸に合っていない</li>
+            <li class="collection-item">A. 設定の Phh Treble Settings にて、<br />
+            Misc features → Set rounded corners diameter<br />
+            で調整してみてください。</li>
           </ul>
 
           <ul class="collection">
