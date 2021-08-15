@@ -174,7 +174,7 @@
             fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</li>
             <li class="collection-item">(任意) Magisk や GApps の ZIP をインストールする<br />
             ⚠ TWRP では Wipe > Advance Wipe > Data で Repair or Change File System を選び、Resize File System を実行しないと容量不足エラーになることがあります</li>
-            <li class="collection-item">(初回のみ) Wipe Data でデータを初期化する</li>
+            <li class="collection-item">(初回のみ) fastboot -w コマンドまたは TWRP の Wipe Data でデータを初期化する</li>
             ⚠ Xiaomi 端末の場合、Xiaomi.eu ではなく公式な MIUI を焼いてから GSI を焼いてください。Xiaomi.eu は端末名を偽装しているため、GSI がどの端末なのか判定できず、パッチがうまく動きません。
           </ol>
         </div>
@@ -196,6 +196,7 @@
           <ul class="collection">
             <li class="collection-item">Q. Google 系サービスが使えない</li>
             <li class="collection-item">A. <a href="https://opengapps.org">Open GApps</a> か、<a href="https://github.com/wacko1805/magiskgapps">MagiskGapps</a> をインストールしてください。<br />
+            インストール後に権限が付与されないことがあるので、設定で確認してください。<br />
             なお、元々 GMS 非対応の端末では動作しない可能性があります。</li>
           </ul>
 
@@ -211,7 +212,7 @@
           </ul>
 
           <ul class="collection">
-            <li class="collection-item">Q. 音の再生ができない、Bluetooth が機能しない</li>
+            <li class="collection-item">Q. 音の再生ができない・おかしい、Bluetooth が機能しない</li>
             <li class="collection-item">A. 設定の Phh Treble Settings にて、<br />
             Misc features → Disable audio effects<br />
             Misc features → Force-disable A2DP offload<br />
