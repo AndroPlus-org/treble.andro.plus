@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>FlokoROM GSI is here!</title>
+  <title>FlokoROM GSI - クリーンで多機能なカスタム ROM</title>
   
   <meta name="msapplication-TileColor" content="#2d88ef">
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
@@ -129,6 +129,8 @@
             <li class="collection-item">* Securize と同等の状態に変更 (vendor から端末情報を読み取りセットします)</li>
             <li class="collection-item">* Xiaomi Mi 11 Lite 5G 向けパッチ追加 (FeliCa での支払いも可能)</li>
             <li class="collection-item">* Xiaomi MIX 4 向けに画面消灯時に復帰しなくなる問題を修正</li>
+            <li class="collection-item">* ディスプレイカットアウト設定を無視させて全画面表示化する「無効化」を開発者向けオプション→ディスプレイ カットアウトの選択肢に追加</li>
+            <li class="collection-item">* 指紋認証センサーを触ったときではなく押したときに反応させるパッチを追加 (<a href="#fpress">下記ヘルプ参照</a>)</li>
           </ul>
           ソースコード: <a href="https://github.com/FlokoROM-GSI">GitHub</a><br />
           <p class="fxxk">この GSI を使用している際の不具合については hota/lindwurm 氏に質問しないでください。この GSI はあくまで非公式なもので、公式版とは異なります。</p>
@@ -203,7 +205,8 @@
 
           <ul class="collection">
             <li class="collection-item">Q. SafetyNet が通らない</li>
-            <li class="collection-item">A. <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> を使ってください。Google Pay は <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GPay-SQLite-Fix</a> で動作させられます。<br />
+            <li class="collection-item">A. <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> を使ってください。(標準で通っていれば不要です)<br />
+            Google Pay は <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GPay-SQLite-Fix</a> で動作させられます。<br />
             一見すると Google Pay はモジュールなしで動作するように見えることがありますが、モジュールなしだと支払い時にエラーになってしまいます。</li>
           </ul>
 
@@ -267,9 +270,20 @@
             <li class="collection-item">A. 設定の Phh Treble Settings にて、DT2W関係のオプションを有効にすれば使える可能性があります。<br />
             それでも動かない場合は、<br />
             設定→ロック画面→時間と情報を常に表示<br />
-            をオンにした上で<br />
+            をオンにした上で adb shell にて<br />
             settings put secure doze_pulse_on_double_tap 1<br />
             を実行するとダブルタップで点灯させられます。</li>
+          </ul>
+
+          <ul class="collection" id="fpress">
+            <li class="collection-item">Q. 指紋認証センサーを触ったときではなく、押したときに認証させたい</li>
+            <li class="collection-item">A. 0918ビルド以降で有効化できるようにしました。<br />
+            adb shell にて<br />
+            cmd overlay enable --user 0 me.phh.treble.overlay.misc.fingerprint.press<br />
+            を実行して再起動してください。<br />
+            無効化するには<br />
+            cmd overlay disable --user 0 me.phh.treble.overlay.misc.fingerprint.press<br />
+            を実行してください。</li>
           </ul>
 
           <ul class="collection">
@@ -283,7 +297,7 @@
           </ul>
 
           Phh-Treble 自体のバグではなく FlokoROM GSI 特有のバグがある場合は <a href="https://github.com/FlokoROM-GSI/treble_experimentations/issues">Create issue</a> してお知らせください。<br />
-          ハードウェアに関する問題 (例: SIM が認識されない、Wi-Fi に接続できない) がある場合は、一度 <a href="https://github.com/phhusson/treble_experimentations/releases">Phh-Treble AOSP GSI</a> を焼いてみて再現するか確認してください。もし AOSP でも同様の問題が起きていれば、logcat を取得した上で <a href="https://github.com/phhusson/treble_experimentations/issues">Phh 氏へ Issue</a> を伝えてください。
+          ハードウェアに関する問題 (例: SIM が認識されない、Wi-Fi に接続できない) がある場合は、一度 <a href="https://github.com/phhusson/treble_experimentations/releases">Phh-Treble AOSP GSI</a> を焼いてみて再現するか確認してください。もし AOSP でも同様の問題が起きていれば、logcat を取得した上で <a href="https://github.com/phhusson/treble_experimentations/issues">phhusson 氏へ Issue</a> を伝えてください。
           <p class="fxxk">この GSI を使用している際の不具合については hota/lindwurm 氏に質問しないでください。この GSI はあくまで非公式なもので、公式版とは異なります。</p>
           <p class="fxxk">DO NOT ask hota/lindwurm to help if you are using my GSI. GSI is not maintained by him.</p>
         </div>
