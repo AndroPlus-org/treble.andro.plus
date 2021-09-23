@@ -204,6 +204,16 @@
           </ul>
 
           <ul class="collection">
+            <li class="collection-item">Q. ゲームや銀行アプリが使えない</li>
+            <li class="collection-item">A. 無駄に root 化や Bootloader Unlock を検知するアプリはそのままでは起動できません。<br />
+            ・Magisk の設定で「Magisk アプリを隠す」を実行<br />
+            ・MagiskHide を有効化し、対象アプリに追加<br />
+            ・<a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> をインストール<br />
+            ・USB デバッグを検知する場合は設定→FlokoROM の設定→その他→ゲームモード→USB デバッグを無効化にチェックを付けてゲームモードの対象にアプリを追加<br />
+            をしてください。</li>
+          </ul>
+
+          <ul class="collection">
             <li class="collection-item">Q. SafetyNet が通らない</li>
             <li class="collection-item">A. <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> を使ってください。(標準で通っていれば不要です)<br />
             Google Pay は <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GPay-SQLite-Fix</a> で動作させられます。<br />
